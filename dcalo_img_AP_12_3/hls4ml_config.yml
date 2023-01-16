@@ -1,0 +1,25 @@
+Backend: Vivado
+ClockPeriod: 5
+HLSConfig:
+  LayerName:
+    final_q_activation:
+      Precision:
+        result: ap_fixed<16,11,AP_RND_CONV,AP_SAT>
+    q_dense:
+      Precision:
+        result: ap_fixed<16,11,AP_RND_CONV,AP_SAT>
+    q_dense_linear:
+      Precision:
+        result: ap_fixed<16,11,AP_RND_CONV,AP_SAT>
+  Model:
+    Precision: ap_fixed<12,4>
+    ReuseFactor: 60000
+    Strategy: Resource
+IOType: io_stream
+InputData: null
+KerasModel: !keras_model 'dcalo_img_AP_12_3/keras_model.h5'
+OutputDir: dcalo_img_AP_12_3
+OutputPredictions: null
+Part: xczu9eg-ffvb1156-2-e
+ProjectName: myproject
+Stamp: fAe7721B
